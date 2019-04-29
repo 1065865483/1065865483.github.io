@@ -5,19 +5,19 @@
   
 
   
-  <title>python + selenium识别图形验证码 | 一滴水</title>
+  <title>2.python + selenium识别图形验证码 | 一滴水</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Welcome to [一滴水] 目录一、验证码的类型与作用二、验证码的处理方法三、验证码的处理方法之通过cookie绕过四、验证码的处理方法之验证码识别技术 一、验证码的类型与作用验证码类型：常见的验证码包括图形验证码、文字验证码、滑动验证码等；而对于验证码识别技术，本文重点讲述的是图形验证码的识别；当然，针对cookie绕过验证码的方法，是不需要区分验证码的类型的。 不少网站在用户登、用户提交">
 <meta name="keywords" content="python,Selenium - aipOcr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python + selenium识别图形验证码">
-<meta property="og:url" content="http://yoursite.com/2019/04/14/识别图形验证码/index.html">
+<meta property="og:title" content="2.python + selenium识别图形验证码">
+<meta property="og:url" content="http://yoursite.com/2019/04/14/2.python + selenium识别图形验证码/index.html">
 <meta property="og:site_name" content="一滴水">
 <meta property="og:description" content="Welcome to [一滴水] 目录一、验证码的类型与作用二、验证码的处理方法三、验证码的处理方法之通过cookie绕过四、验证码的处理方法之验证码识别技术 一、验证码的类型与作用验证码类型：常见的验证码包括图形验证码、文字验证码、滑动验证码等；而对于验证码识别技术，本文重点讲述的是图形验证码的识别；当然，针对cookie绕过验证码的方法，是不需要区分验证码的类型的。 不少网站在用户登、用户提交">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-16T09:46:11.211Z">
+<meta property="og:updated_time" content="2019-04-29T02:16:46.998Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python + selenium识别图形验证码">
+<meta name="twitter:title" content="2.python + selenium识别图形验证码">
 <meta name="twitter:description" content="Welcome to [一滴水] 目录一、验证码的类型与作用二、验证码的处理方法三、验证码的处理方法之通过cookie绕过四、验证码的处理方法之验证码识别技术 一、验证码的类型与作用验证码类型：常见的验证码包括图形验证码、文字验证码、滑动验证码等；而对于验证码识别技术，本文重点讲述的是图形验证码的识别；当然，针对cookie绕过验证码的方法，是不需要区分验证码的类型的。 不少网站在用户登、用户提交">
   
     <link rel="alternate" href="/atom.xml" title="一滴水" type="application/atom+xml">
@@ -65,9 +65,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-识别图形验证码" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-2.python + selenium识别图形验证码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/04/14/识别图形验证码/" class="article-date">
+    <a href="/2019/04/14/2.python + selenium识别图形验证码/" class="article-date">
   <time datetime="2019-04-14T08:01:23.000Z" itemprop="datePublished">2019-04-14</time>
 </a>
     
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python + selenium识别图形验证码
+      2.python + selenium识别图形验证码
     </h1>
   
 
@@ -111,12 +111,12 @@
 <p>代码如下：<br>（先放上单次识别的方法：）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def distinguishImage(image_path):</span><br><span class="line">    APP_ID = &apos;15987900&apos;</span><br><span class="line">    API_KEY = &apos;gtiYrGTtklhAh4FqblxKteVD&apos;</span><br><span class="line">    SECRET_KEY = &apos;GZauXsDtpRLLUkKTNp4GaiCGTb1cYAMK&apos;</span><br><span class="line">    client = AipOcr(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line">    with open(image_path, &apos;rb&apos;) as fp:</span><br><span class="line">        image = fp.read()</span><br><span class="line">        res = client.basicAccurate(image)</span><br><span class="line">        print(&apos;res=======&apos;,res)</span><br></pre></td></tr></table></figure></p>
 <hr>
 <hr>
-<h2 id="个人采用了多次识别的方法来实现。"><a href="#个人采用了多次识别的方法来实现。" class="headerlink" title="个人采用了多次识别的方法来实现。"></a>个人采用了多次识别的方法来实现。</h2><p>实现效果：如，本人设置的最大值为20（可调），那么20次内能识别则可通过，如果20次没识别则结束。<br>大家可看本人下一篇博客：<br><a href="https://1065865483.github.io/2019/04/14/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%E4%B9%8B%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB%E6%8A%80%E6%9C%AF--%E7%99%BE%E5%BA%A6AIP%EF%BC%88%E7%BB%AD%EF%BC%89/" target="_blank" rel="noopener">识别图形验证码之百度AI识别法</a></p>
+<h2 id="个人采用了多次识别的方法来实现。"><a href="#个人采用了多次识别的方法来实现。" class="headerlink" title="个人采用了多次识别的方法来实现。"></a>个人采用了多次识别的方法来实现。</h2><p>实现效果：如，本人设置的最大值为20（可调），那么20次内能识别则可通过，如果20次没识别则结束。<br>请看本人下一篇博客：<br><a href="https://1065865483.github.io/2019/04/14/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%E4%B9%8B%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB%E6%8A%80%E6%9C%AF--%E7%99%BE%E5%BA%A6AIP%EF%BC%88%E7%BB%AD%EF%BC%89/" target="_blank" rel="noopener">识别图形验证码之百度AI识别法</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/14/识别图形验证码/" data-id="cjujlsoqu00057ctf7gl62c1h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/14/2.python + selenium识别图形验证码/" data-id="cjv1qnt1c00009wtfp3yr1w0v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Selenium-aipOcr/">Selenium - aipOcr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
@@ -127,19 +127,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/04/14/0博客模板/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/16/5.图像灰度处理的两个简单方法/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          模板
+          5.图像灰度处理的两个简单方法
         
       </div>
     </a>
   
   
-    <a href="/2019/04/14/验证码的处理方法之验证码识别技术--百度AIP（续）/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/04/14/0博客模板/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">识别图形验证码之百度AI识别法</div>
+      <div class="article-nav-title">0.模板</div>
     </a>
   
 </nav>
@@ -175,7 +175,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Selenium-aipOcr/" style="font-size: 10px;">Selenium - aipOcr</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/selenium-aipOcr/" style="font-size: 10px;">selenium - aipOcr</a>
+      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Selenium-aipOcr/" style="font-size: 10px;">Selenium - aipOcr</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/selenium-aipOcr/" style="font-size: 15px;">selenium - aipOcr</a>
     </div>
   </div>
 
@@ -197,23 +197,23 @@
       <ul>
         
           <li>
-            <a href="/2019/04/14/0博客模板/">模板</a>
+            <a href="/2019/04/16/5.图像灰度处理的两个简单方法/">5.图像灰度处理的两个简单方法</a>
           </li>
         
           <li>
-            <a href="/2019/04/14/识别图形验证码/">python + selenium识别图形验证码</a>
+            <a href="/2019/04/14/2.python + selenium识别图形验证码/">2.python + selenium识别图形验证码</a>
           </li>
         
           <li>
-            <a href="/2019/04/14/验证码的处理方法之验证码识别技术--百度AIP（续）/">识别图形验证码之百度AI识别法</a>
+            <a href="/2019/04/14/0博客模板/">0.模板</a>
           </li>
         
           <li>
-            <a href="/2019/04/13/Markdown基本语法学习记录/">Markdown基本语法学习记录</a>
+            <a href="/2019/04/14/3.验证码的处理方法之验证码识别技术--百度AIP（续）/">3.识别图形验证码之百度AI识别法</a>
           </li>
         
           <li>
-            <a href="/2019/04/13/hello-world/">hello word</a>
+            <a href="/2019/04/14/4.验证码的处理方法之验证码识别技术--腾讯、谷歌/">4.识别图形验证码之百度AI识别法--腾讯、谷歌</a>
           </li>
         
       </ul>
